@@ -238,21 +238,3 @@ class Units:
 	const MOVING_UNIT_RADIUS_MAX_M = 1.0
 	const EMPTY_SPACE_RADIUS_SURROUNDING_STRUCTURE_M = MOVING_UNIT_RADIUS_MAX_M * 2.5
 	const STRUCTURE_CONSTRUCTING_SPEED = 0.3  # progress [0.0..1.0] per second
-
-
-class VoiceNarrator:
-	enum Events {
-		MATCH_STARTED,
-		MATCH_ABORTED,
-		UNIT_LOST,
-		UNIT_PRODUCTION_STARTED,
-		NOT_ENOUGH_RESOURCES,
-	}
-
-	const EVENT_TO_ASSET_MAPPING = {
-		Events.MATCH_STARTED: preload("res://assets/voice/english/battle_control_online.ogg"),
-		Events.MATCH_ABORTED: preload("res://assets/voice/english/battle_control_offline.ogg"),
-		Events.UNIT_LOST: preload("res://assets/voice/english/unit_lost.ogg"),
-		Events.UNIT_PRODUCTION_STARTED: preload("res://assets/voice/english/training.ogg"),
-		Events.NOT_ENOUGH_RESOURCES: preload("res://assets/voice/english/not_enough_resources.ogg"),
-	}
